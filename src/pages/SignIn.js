@@ -12,7 +12,7 @@ const SignIn = () =>{
         if (!email || !password) {
             return
         }
-        signInWithEmailAndPassword(auth,email,password).then(()=>{alert("Başarılı Bir Şekilde giriş yaptınız.")}).catch((e)=>{console.log(e)})
+        signInWithEmailAndPassword(auth,email,password)/*.then(()=>{alert("Başarılı Bir Şekilde giriş yaptınız.")})*/.catch((e)=>{console.log(e)})
     }, [email,password])
 
     return (
