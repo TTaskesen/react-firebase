@@ -2,6 +2,9 @@ import { signOut } from "firebase/auth"
 import { useCallback } from "react"
 import { auth } from "../firebase"
 import { useAuthState } from "react-firebase-hooks/auth"
+//import {useCollectionData } from "react-firebase-hooks/firestore"
+import Posts from "../components/Posts"
+import AddPost from "../components/AddPost"
 
 const Home = () => {
 const [user,isLoading]=useAuthState(auth)
@@ -23,6 +26,8 @@ const [user,isLoading]=useAuthState(auth)
         </div>
         <button onClick={handleSignout} className="p-4 bg-pink-500 rounded-md">Sign out</button>
         </div>
+        <AddPost/>
+        <Posts/>
     </div>
     )
 }
